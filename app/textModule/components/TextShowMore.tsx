@@ -19,7 +19,7 @@ interface IProps {
   textShowLessStyle?: StyleProp<TextStyle>;
 }
 
-export const TextMoreLess = React.memo((props: IProps) => {
+const TextShowMore = React.memo((props: IProps) => {
   const { children, textStyle, numberOfLines, textShowLessStyle, textShowMoreStyle, textShowLess = 'Show less', textShowMore = 'Show more' } = props;
   const [textTruncate, setTextTruncate] = useState<string | undefined>();
   const [expanded, setExpanded] = useState<boolean>(false);
@@ -183,3 +183,5 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
 });
+
+export default TextShowMore;

@@ -15,7 +15,7 @@ interface IProps {
   numberOfLines?: number;
 }
 
-export const TextTruncate = React.memo((props: IProps) => {
+const TextTruncate = React.memo((props: IProps) => {
   const { children, style, numberOfLines } = props;
   const [textTruncate, setTextTruncate] = useState<string | undefined>();
 
@@ -65,3 +65,5 @@ const styles = StyleSheet.create({
     opacity: 0,
   },
 });
+
+export default TextTruncate;
